@@ -12,6 +12,6 @@ public class HelloWorldController {
 @RequestMapping("/mi")
 @ResponseBody
 public String sayHello() {
-return "Welcome to Miinstitute..!!!";
+return "Welcome to India..!!!";
 }
 }
