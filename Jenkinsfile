@@ -34,7 +34,7 @@ pipeline {
   stage('DOcker Login') {
           
             steps {
-		    sh 'docker login -u ishaqmd -p san@12345'	 
+		    sh 'docker login -u ishaqmd -p xxxxx'	 
 	    }
   }
   stage('Publish image to Docker Hub') {
