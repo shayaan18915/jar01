@@ -31,18 +31,12 @@ pipeline {
           }
         }
      
-  stage('DOcker Login') {
-          
-            steps {
-		    sh 'docker login -u ishaqmd -p xxxxx'	 
-	    }
-  }
   stage('Publish image to Docker Hub') {
           
             steps {
         withDockerRegistry([ credentialsId: "DOCKER_HUB", url: "https://registry.hub.docker.com" ]) {
           sh  'docker push ishaqmd/jenkins:latest'
-        //  sh  'docker push ishaqmd/jenkins:$BUILD_NUMBER'
+          sh  'docker push ishaqmd/jenkins:$BUILD_NUMBER'
         }
                   
           }
