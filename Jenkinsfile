@@ -23,7 +23,7 @@ pipeline {
 
   stage('Docker Build and Tag') {
            steps {
-                sh 'sudo chmod 666 /var/run/docker.sock'
+                sh 'chmod 666 /var/run/docker.sock'
                 sh 'docker build -t samplewebapp:latest .' 
                 sh 'docker tag samplewebapp ishaqmd/rakesh:latest'
                 //sh 'docker tag samplewebapp nikhilnidhi/samplewebapp:$BUILD_NUMBER'
