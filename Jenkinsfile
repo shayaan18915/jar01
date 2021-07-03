@@ -34,7 +34,7 @@ pipeline {
   stage('DOcker Login') {
           
             steps {
-		    sh 'docker login -u ishaq -p $DOCKER_PASS'	 
+		    sh 'docker login -u ishaq -p san@12345'	 
 	    }
   }
   stage('Publish image to Docker Hub') {
