@@ -40,7 +40,6 @@ pipeline {
   stage('Publish image to Docker Hub') {
           
             steps {
-		    sh docker login -u ishaq -p $DOCKER_PASS
         withDockerRegistry([ credentialsId: "DOCKER_HUB", url: "https://registry.hub.docker.com" ]) {
           sh  'docker push ishaqmd/jenkins:latest'
         //  sh  'docker push ishaqmd/jenkins:$BUILD_NUMBER'
